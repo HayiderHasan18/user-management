@@ -48,13 +48,13 @@ try {
 	const [user] = await dbConnection.query("select username,userid,password,email from users where  email = ?", [email])
 	if (user.length == 0)
 	{
-		 return res.status(StatusCodes.BAD_REQUEST).json({msg: "invalid crede"})
+		 return res.status(StatusCodes.BAD_REQUEST).json({msg: "invalid email or password"})
 	 }
 	//  compare password
 	const isMatch = await bcrypt.compare(password, user[0].password);
 	if (!isMatch)
 	{
-	  return res.status(StatusCodes.BAD_REQUEST).json({msg: "invalid credential"})
+	  return res.status(StatusCodes.BAD_REQUEST).json({msg: "Invalid email or password"})
 	}
 	const username = user[0].username;
 	const userid = user[0].userid;
