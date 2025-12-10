@@ -39,7 +39,9 @@
 .posts-list {
   margin-top: 30px;
 }
-
+.post-card p {
+  white-space: pre-line;
+}
 .post-card {
   background-color: #fff;
   padding: 15px;
