@@ -57,7 +57,7 @@ const PostsPage = () => {
           <div key={post.id} className="post-card">
             <h3 className="font-bold text-xl mb-2 text-center">{post.title}</h3>
             <p className="text-gray-700">{post.content}</p>
-            <small>By: {post.username}</small>
+            <small className="font-bold text-xl">By: {post.username}</small>
             <div className="post-actions">
               {post.userid === userId && (
                 <>
