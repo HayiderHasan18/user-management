@@ -1,0 +1,276 @@
+
+@import "tailwindcss";
+/* Reset and base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Dark mode */
+.dark {
+  background-color: #1a1a1a;
+  color: #ffffff;
+}
+
+.dark .header,
+.dark .footer,
+.dark .auth-box,
+.dark .post-card {
+  background-color: #2d2d2d;
+  border-color: #444;
+}
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: white;
+  border-bottom: 1px solid #ddd;
+}
+
+.dark .header {
+  background: #2d2d2d;
+  border-color: #444;
+}
+
+.header h1 {
+  font-size: 1.5rem;
+  color: #2563eb;
+}
+
+.dark .header h1 {
+  color: #60a5fa;
+}
+
+.header nav {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.header a {
+  text-decoration: none;
+  color: #555;
+  padding: 0.5rem;
+}
+
+.dark .header a {
+  color: #ccc;
+}
+
+.header button {
+  background: #2563eb;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  cursor: pointer;
+}
+
+.header button:hover {
+  background: #1d4ed8;
+}
+
+/* Main container */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+/* Hero section */
+.hero {
+  text-align: center;
+  padding: 4rem 1rem;
+}
+
+.hero h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #2563eb;
+}
+
+.dark .hero h2 {
+  color: #60a5fa;
+}
+
+/* Auth section */
+.auth-section {
+  max-width: 400px;
+  margin: 2rem auto;
+}
+
+.auth-box {
+  background: white;
+  padding: 2rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.auth-box h3 {
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+.dark .auth-box h3 {
+  color: #fff;
+}
+
+.auth-box input {
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 0.25rem;
+  font-size: 1rem;
+}
+
+.dark .auth-box input {
+  background: #333;
+  border-color: #555;
+  color: white;
+}
+
+.auth-box button {
+  width: 100%;
+  padding: 0.75rem;
+  background: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.link-btn {
+  background: none;
+  color: #2563eb;
+  text-decoration: underline;
+  padding: 0;
+  display: inline;
+}
+
+.dark .link-btn {
+  color: #60a5fa;
+}
+
+/* Sections */
+.section {
+  margin: 3rem 0;
+  padding: 2rem;
+  background: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.dark .section {
+  background: #2d2d2d;
+}
+
+.section h3 {
+  margin-bottom: 1.5rem;
+  color: #2563eb;
+}
+
+.dark .section h3 {
+  color: #60a5fa;
+}
+
+/* Posts */
+.posts-grid {
+  display: grid;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.post-card {
+  padding: 1.5rem;
+  border: 1px solid #ddd;
+  border-radius: 0.5rem;
+  background: white;
+}
+
+.post-card h4 {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.dark .post-card h4 {
+  color: #fff;
+}
+
+.post-card .author {
+  color: #666;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.dark .post-card .author {
+  color: #aaa;
+}
+
+.delete-btn {
+  background: #dc2626;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+
+/* Create post form */
+.create-form input,
+.create-form textarea {
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 0.25rem;
+  font-size: 1rem;
+}
+
+.dark .create-form input,
+.dark .create-form textarea {
+  background: #333;
+  border-color: #555;
+  color: white;
+}
+
+.create-form textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.create-form button {
+  background: #059669;
+  color: white;
+  border: none;
+  padding: 0.75rem 2rem;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 2rem;
+  background: white;
+  border-top: 1px solid #ddd;
+  margin-top: 3rem;
+}
+
+.dark .footer {
+  background: #2d2d2d;
+  border-color: #444;
+}
