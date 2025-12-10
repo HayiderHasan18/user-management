@@ -4,7 +4,7 @@ const app = express()
 const cors = require('cors')
 // Allow React frontend to access backend
 app.use(cors({
-  origin: "http://localhost:5173", // React app origin
+  origin: "https://wabi-user-management.netlify.app",
   methods: ["GET", "POST", "PUT", "DELETE"],
   allowedHeaders: ["Content-Type", "Authorization"]
 }));
