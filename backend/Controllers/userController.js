@@ -1,5 +1,4 @@
 
-// db connection
 const dbConnection = require('../Db/db');
 const bcrypt = require("bcrypt");
 const { StatusCodes } = require('http-status-codes');
@@ -20,11 +19,11 @@ async function register(req, res)
 		return res.status(StatusCodes.BAD_REQUEST).json({msg: " user already registered"})	
 		}
 		
-		if (password.length <= 8)
+		if (password.length < 8)
 		{
 			return res.status(StatusCodes.BAD_REQUEST).json({msg: "password must be atleast 8 charaecter"})
 		}
-		// encrypt password
+	
 		const salt = await bcrypt.genSalt(10)
 		const hashedPassword = await bcrypt.hash(password,salt)
 
@@ -50,7 +49,7 @@ try {
 	{
 		 return res.status(StatusCodes.BAD_REQUEST).json({msg: "invalid email or password"})
 	 }
-	//  compare password
+	
 	const isMatch = await bcrypt.compare(password, user[0].password);
 	if (!isMatch)
 	{

@@ -9,11 +9,11 @@ const {
     deletePost
 } = require('../Controllers/postController');
 
-// Routes
-router.post('/', authMiddleware, createPost);       // create post
-router.get('/', getAllPosts);                       // get all posts
-router.get('/:id', getPost);                        // get single post
-router.put('/:id', authMiddleware, updatePost);     // update post (owner only)
-router.delete('/:id', authMiddleware, deletePost);  // delete post (owner only)
+
+router.post('/', authMiddleware, createPost);       
+router.get('/', getAllPosts);                       
+router.get('/:id', getPost);                        
+router.put('/:id', authMiddleware, updatePost);     
+router.delete('/:id', authMiddleware, deletePost); 
 
 module.exports = router;

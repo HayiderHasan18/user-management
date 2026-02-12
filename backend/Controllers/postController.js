@@ -1,10 +1,9 @@
 const dbConnection = require('../Db/db');
 const { StatusCodes } = require('http-status-codes');
 
-// CREATE POST
 async function createPost(req, res) {
     const { title, content } = req.body;
-    const userid = req.user.userid; // authenticated user
+    const userid = req.user.userid; 
 
     if (!title || !content) {
         return res.status(StatusCodes.BAD_REQUEST).json({ msg: "Title and content are required" });
@@ -21,8 +20,6 @@ async function createPost(req, res) {
         res.status(StatusCodes.INTERNAL_SERVER_ERROR).json({ msg: "Something went wrong" });
     }
 }
-
-// GET ALL POSTS
 async function getAllPosts(req, res) {
     try {
         const [posts] = await dbConnection.query(
@@ -37,8 +34,6 @@ async function getAllPosts(req, res) {
         res.status(StatusCodes.INTERNAL_SERVER_ERROR).json({ msg: "Something went wrong" });
     }
 }
-
-// GET SINGLE POST
 async function getPost(req, res) {
     const { id } = req.params;
 
@@ -61,8 +56,6 @@ async function getPost(req, res) {
         res.status(StatusCodes.INTERNAL_SERVER_ERROR).json({ msg: "Something went wrong" });
     }
 }
-
-// UPDATE POST
 async function updatePost(req, res) {
     const { id } = req.params;
     const { title, content } = req.body;
@@ -90,8 +83,6 @@ async function updatePost(req, res) {
         res.status(StatusCodes.INTERNAL_SERVER_ERROR).json({ msg: "Something went wrong" });
     }
 }
-
-// DELETE POST
 async function deletePost(req, res) {
     const { id } = req.params;
     const userid = req.user.userid;
