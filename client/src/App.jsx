@@ -12,11 +12,9 @@ function App() {
     <Router>
       <ToastContainer position="top-right" autoClose={3000} />
       <Routes>
-        {/* Public route */}
+    
         <Route path="/login" element={<AuthMode />} />
         <Route path="/signup" element={<AuthMode />} />
-
-        {/* Protected route */}
         <Route
           path="/posts"
           element={
@@ -26,8 +24,6 @@ function App() {
             </ProtectedRoute>
           }
         />
-
-        {/* Default redirect */}
         <Route path="*" element={<AuthMode />} />
       </Routes>
     </Router>

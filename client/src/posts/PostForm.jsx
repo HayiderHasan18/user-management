@@ -36,7 +36,7 @@ export default function PostForm({ editingPost, onPostSaved }) {
         toast.success("Post created successfully!");
       }
 
-      onPostSaved(); // trigger parent refresh
+      onPostSaved(); 
       setTitle("");
       setContent("");
     } catch (err) {

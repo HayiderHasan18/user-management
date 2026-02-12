@@ -1,6 +1,4 @@
-
 @import "tailwindcss";
-/* Reset and base */
 * {
   margin: 0;
   padding: 0;
@@ -9,24 +7,7 @@
 
 body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  transition: background-color 0.3s, color 0.3s;
 }
-
-/* Dark mode */
-.dark {
-  background-color: #1a1a1a;
-  color: #ffffff;
-}
-
-.dark .header,
-.dark .footer,
-.dark .auth-box,
-.dark .post-card {
-  background-color: #2d2d2d;
-  border-color: #444;
-}
-
-/* Header */
 .header {
   display: flex;
   justify-content: space-between;
@@ -36,18 +17,9 @@ body {
   border-bottom: 1px solid #ddd;
 }
 
-.dark .header {
-  background: #2d2d2d;
-  border-color: #444;
-}
-
 .header h1 {
   font-size: 1.5rem;
   color: #2563eb;
-}
-
-.dark .header h1 {
-  color: #60a5fa;
 }
 
 .header nav {
@@ -60,10 +32,6 @@ body {
   text-decoration: none;
   color: #555;
   padding: 0.5rem;
-}
-
-.dark .header a {
-  color: #ccc;
 }
 
 .header button {
@@ -79,14 +47,12 @@ body {
   background: #1d4ed8;
 }
 
-/* Main container */
+
 .container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 2rem;
 }
-
-/* Hero section */
 .hero {
   text-align: center;
   padding: 4rem 1rem;
@@ -97,12 +63,6 @@ body {
   margin-bottom: 1rem;
   color: #2563eb;
 }
-
-.dark .hero h2 {
-  color: #60a5fa;
-}
-
-/* Auth section */
 .auth-section {
   max-width: 400px;
   margin: 2rem auto;
@@ -120,10 +80,6 @@ body {
   color: #333;
 }
 
-.dark .auth-box h3 {
-  color: #fff;
-}
-
 .auth-box input {
   width: 100%;
   padding: 0.75rem;
@@ -131,12 +87,6 @@ body {
   border: 1px solid #ddd;
   border-radius: 0.25rem;
   font-size: 1rem;
-}
-
-.dark .auth-box input {
-  background: #333;
-  border-color: #555;
-  color: white;
 }
 
 .auth-box button {
@@ -157,12 +107,6 @@ body {
   padding: 0;
   display: inline;
 }
-
-.dark .link-btn {
-  color: #60a5fa;
-}
-
-/* Sections */
 .section {
   margin: 3rem 0;
   padding: 2rem;
@@ -171,20 +115,10 @@ body {
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
-.dark .section {
-  background: #2d2d2d;
-}
-
 .section h3 {
   margin-bottom: 1.5rem;
   color: #2563eb;
 }
-
-.dark .section h3 {
-  color: #60a5fa;
-}
-
-/* Posts */
 .posts-grid {
   display: grid;
   gap: 1.5rem;
@@ -204,18 +138,10 @@ body {
   color: #333;
 }
 
-.dark .post-card h4 {
-  color: #fff;
-}
-
 .post-card .author {
   color: #666;
   font-size: 0.9rem;
   margin-bottom: 1rem;
-}
-
-.dark .post-card .author {
-  color: #aaa;
 }
 
 .delete-btn {
@@ -227,8 +153,6 @@ body {
   cursor: pointer;
   margin-top: 1rem;
 }
-
-/* Create post form */
 .create-form input,
 .create-form textarea {
   width: 100%;
@@ -237,13 +161,6 @@ body {
   border: 1px solid #ddd;
   border-radius: 0.25rem;
   font-size: 1rem;
-}
-
-.dark .create-form input,
-.dark .create-form textarea {
-  background: #333;
-  border-color: #555;
-  color: white;
 }
 
 .create-form textarea {
@@ -261,16 +178,10 @@ body {
   font-size: 1rem;
 }
 
-/* Footer */
 .footer {
   text-align: center;
   padding: 2rem;
   background: white;
   border-top: 1px solid #ddd;
   margin-top: 3rem;
-}
-
-.dark .footer {
-  background: #2d2d2d;
-  border-color: #444;
 }

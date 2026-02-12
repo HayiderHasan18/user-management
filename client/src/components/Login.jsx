@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import axiosInstance from "../services/api"; // import the instance
+import axiosInstance from "../services/api"; 
 
 const Login = ({ onToggleForm }) => {
   const navigate = useNavigate();
@@ -27,7 +27,7 @@ const Login = ({ onToggleForm }) => {
       const res = await axiosInstance.post("/users/login", formData);
       sessionStorage.setItem("token", res.data.token);
       setMessage("Login successful!");
-      navigate("/posts"); // redirect to posts page
+      navigate("/posts"); 
     } catch (err) {
       setMessage(err.response?.data?.msg || "Login failed.");
     } finally {

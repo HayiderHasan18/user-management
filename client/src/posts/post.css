@@ -1,4 +1,3 @@
-/* src/components/Posts/Posts.css */
 .posts-container {
   max-width: 800px;
   margin: 40px auto;
@@ -74,11 +73,11 @@
 }
 
 .post-actions button:first-child {
-  background-color: #ffc107; /* edit */
+  background-color: #ffc107; 
   color: #333;
 }
 
 .post-actions button:last-child {
-  background-color: #dc3545; /* delete */
+  background-color: #dc3545; 
   color: #fff;
 }

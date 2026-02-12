@@ -1,4 +1,4 @@
-// src/components/Posts/PostsPage.jsx
+
 import React, { useState, useEffect } from "react";
 import axiosInstance from "../services/api";
 import PostForm from "./PostForm";
@@ -8,7 +8,7 @@ const PostsPage = () => {
   const [posts, setPosts] = useState([]);
   const [editingPost, setEditingPost] = useState(null);
 
-  // Get logged-in user ID from token
+  
   const token = sessionStorage.getItem("token");
   const userId = token ? JSON.parse(atob(token.split(".")[1])).userid : null;
 
