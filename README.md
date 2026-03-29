@@ -22,30 +22,48 @@ Database: MySQL (Aiven Cloud)
 Authentication: JWT
 API: RESTful services
 ⚙️ Installation & Usage
+
 1. Clone the repository
 git clone https://github.com/HayiderHasan18/user-management.git
+
 cd user-management-system
-2. Setup Backend
+
+3. Setup Backend
+   
 cd backend
+
 npm install
+
 nodemon server.js
 
 Create a .env file inside the backend folder:
 
 DB_HOST=your_host
+
 DB_USER=your_user
+
 DB_PASSWORD=your_password
+
 DB_NAME=your_database
+
 JWT_SECRET=your_secret
+
 PORT=5000
+
 3. Setup Frontend
+   
 cd client
+
 npm install
+
 npm run dev
-4. Run the Application
+
+5. Run the Application
+   
 Open your browser
 Visit: http://localhost:5173 (or the port shown in terminal)
 Register or login to use the system
+
 🎯 Purpose
 
 This project was developed to demonstrate full-stack development skills, including authentication, REST API design, and database integration using a real-world architecture.
