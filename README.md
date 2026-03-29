@@ -14,7 +14,7 @@ User registration and login
 JWT-based authentication
 CRUD operations on users
 MySQL database integration (Aiven)
-Separation of frontend and backend
+Clear separation between frontend and backend
 🛠️ Tech Stack
 Frontend: React / Vue / Angular
 Backend: Node.js, Express.js
@@ -30,7 +30,7 @@ cd backend
 npm install
 nodemon server.js
 
-Create a .env file in the backend folder:
+Create a .env file inside the backend folder:
 
 DB_HOST=your_host
 DB_USER=your_user
@@ -44,11 +44,11 @@ npm install
 npm run dev
 4. Run the Application
 Open your browser
-Go to: http://localhost:5173 (or the port shown in terminal)
-Register or login to start using the system
+Visit: http://localhost:5173 (or the port shown in terminal)
+Register or login to use the system
 🎯 Purpose
 
-This project was built to demonstrate full-stack development skills, including authentication, API development, and database integration using real-world architecture.
+This project was developed to demonstrate full-stack development skills, including authentication, REST API design, and database integration using a real-world architecture.
 
 👨‍💻 Author
 
